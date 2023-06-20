@@ -1,3 +1,4 @@
+from fight_game.utils import timer
 
 
 class Hero:
@@ -9,6 +10,7 @@ class Hero:
     def speak(self):
         print(f"当前英雄{self.name}的血量为{self.hp}，攻击力为{self.power}")
 
+    @timer
     def figh(self, enemy_name, enemy_hp, enemy_power):
         """
         对打。需要输入敌人的 名称， hp， power
@@ -40,9 +42,3 @@ class Sam(Hero):
         super().__init__(name, 0.8*hp, 1.2*power)
 
 
-if __name__ == '__main__':
-    # diaochan = Hero("貂蝉", 20, 100)
-    # diaochan.speak()
-    luban = Sam("鲁班", 200, 150)
-    # luban.speak()
-    luban.figh("王昭君", 200, 150)
