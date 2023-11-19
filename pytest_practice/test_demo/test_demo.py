@@ -1,5 +1,8 @@
 # 在pytest 中，setup 是一个关键字
 # 在 **每条** 用例执行之前执行
+import pytest
+
+
 def setup():
     print("setup执行啦")
 
@@ -10,6 +13,7 @@ def teardown():
 
 
 # 如果没有使用 pytest 方式运行，那么就会当成正常的函数执行。
+@pytest.mark.P0
 def test_demo1():
     print("12312")
     # 断言： Assertion
@@ -21,6 +25,7 @@ def demo():
     return True
 
 
+@pytest.mark.P1
 def test_demo2():
     print("12312")
     # 断言： Assertion
