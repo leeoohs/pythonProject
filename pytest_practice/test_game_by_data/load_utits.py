@@ -6,8 +6,11 @@ class LoadUitls:
     # 应用场景：工具类。
     @classmethod
     def load_yaml(self, yaml_path):
-    # return data
-        return yaml.safe_load(open("yaml_demo.yaml"))
+        # return data
+        return yaml.safe_load(open(yaml_path))
+
+    def load_excel(self):
+        return
 
 
 if __name__ == '__main__':
@@ -15,4 +18,4 @@ if __name__ == '__main__':
     # load_uitls = LoadUitls()
     # load_uitls.load_yaml()
     # 使用累方法调用
-    print(LoadUitls.load_yaml("yaml_demo.yaml"))
+    print(LoadUitls.load_yaml("volume_data.yaml"))
